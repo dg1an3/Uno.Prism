@@ -9,6 +9,8 @@ namespace Prism.DryIoc.Ioc
     {
         public IContainer Instance { get; }
 
+        public IScopedProvider CurrentScope => throw new NotImplementedException();
+
         public DryIocContainerExtension(IContainer container)
         {
             Instance = container;
@@ -80,6 +82,56 @@ namespace Prism.DryIoc.Ioc
         public bool IsRegistered(Type type, string name)
         {
             return Instance.IsRegistered(type, name);
+        }
+
+        public IScopedProvider CreateScope()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IContainerRegistry RegisterSingleton(Type type, Func<object> factoryMethod)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IContainerRegistry RegisterSingleton(Type type, Func<IContainerProvider, object> factoryMethod)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IContainerRegistry RegisterManySingleton(Type type, params Type[] serviceTypes)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IContainerRegistry Register(Type type, Func<object> factoryMethod)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IContainerRegistry Register(Type type, Func<IContainerProvider, object> factoryMethod)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IContainerRegistry RegisterMany(Type type, params Type[] serviceTypes)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IContainerRegistry RegisterScoped(Type from, Type to)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IContainerRegistry RegisterScoped(Type type, Func<object> factoryMethod)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IContainerRegistry RegisterScoped(Type type, Func<IContainerProvider, object> factoryMethod)
+        {
+            throw new NotImplementedException();
         }
     }
 }

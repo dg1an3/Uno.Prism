@@ -273,7 +273,7 @@ namespace Prism.Modularity
                 }
             }
 
-            throw new ModuleTypeLoaderNotFoundException(moduleInfo.ModuleName, string.Format(CultureInfo.CurrentCulture, Resources.NoRetrieverCanRetrieveModule, moduleInfo.ModuleName), null);
+            throw new Exception(); // ModuleTypeLoaderNotFoundException(moduleInfo.ModuleName, string.Format(CultureInfo.CurrentCulture, Resources.NoRetrieverCanRetrieveModule, moduleInfo.ModuleName), null);
         }
 
         private void InitializeModule(IModuleInfo moduleInfo)
